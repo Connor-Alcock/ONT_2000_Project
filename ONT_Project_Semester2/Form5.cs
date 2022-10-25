@@ -79,5 +79,25 @@ namespace ONT_Project_Semester2
         {
 
         }
+
+        private void txtCityDescription_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCityDescription_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCityDescription.Text))
+            {
+                e.Cancel = true;
+                txtCityDescription.Focus();
+                errorProvider1.SetError(txtCityDescription, "City Description should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtCityDescription, "");
+            }
+        }
     }
 }

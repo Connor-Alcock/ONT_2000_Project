@@ -29,6 +29,7 @@ namespace ONT_Project_Semester2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAddCity = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -41,9 +42,11 @@ namespace ONT_Project_Semester2
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCities = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCities)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -110,6 +113,8 @@ namespace ONT_Project_Semester2
             this.txtCityDescription.Name = "txtCityDescription";
             this.txtCityDescription.Size = new System.Drawing.Size(374, 27);
             this.txtCityDescription.TabIndex = 1;
+            this.txtCityDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtCityDescription_Validating);
+            this.txtCityDescription.Validated += new System.EventHandler(this.txtCityDescription_Validated);
             // 
             // txtCityID
             // 
@@ -167,6 +172,10 @@ namespace ONT_Project_Semester2
             this.dgvCities.Size = new System.Drawing.Size(741, 187);
             this.dgvCities.TabIndex = 0;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,6 +190,7 @@ namespace ONT_Project_Semester2
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCities)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +210,6 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.Button btnCityList;
         private System.Windows.Forms.DataGridView dvgCities;
         private System.Windows.Forms.DataGridView dgvCities;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
