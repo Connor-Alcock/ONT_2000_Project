@@ -1,0 +1,9 @@
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\bin\Debug\BLL.dll
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\bin\Debug\BLL.pdb
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\bin\Debug\DAL.dll
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\bin\Debug\DAL.pdb
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\obj\Debug\BLL.dll
+C:\Users\conno\source\repos\ONT_Project_Semester2\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAL
+{
+    public class Agencies
+    {
+
+        public int AgencyID { get; set; }
+        public string AgencyName { get; set; }
+        public int SuburbID { get; set; }
+
+    }
+}
