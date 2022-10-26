@@ -18,6 +18,26 @@ namespace DAL
 
 
 
+        //Stored Procedures for From 1 "Login/Home"
+
+
+
+        public DataTable GetLoginAgent(string Email, string Password)
+        {
+            dbComm = new SqlCommand("sp_GetloginAgent", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Email", Email);
+            dbComm.Parameters.AddWithValue("@Password", Password);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+        }
+
+
+
+
         //Stored Procdues for Form 2 "PropertyType"
 
 
@@ -55,7 +75,7 @@ namespace DAL
 
 
 
-        //Stored Procdues for Form 3 "Properties"
+        //Stored Procedures for Form 3 "Properties"
 
 
 
@@ -127,7 +147,7 @@ namespace DAL
 
 
 
-        //Stored Procdues for Form 4 "Provinces"
+        //Stored Procedures for Form 4 "Provinces"
 
 
 

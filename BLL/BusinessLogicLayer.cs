@@ -14,6 +14,19 @@ namespace BLL
 
 
 
+        //DAL for Form 1 "Login/Home"
+
+
+
+        public DataTable GetLoginAgent(string Email, string Password)
+        {
+
+            return dal.GetLoginAgent(Email, Password);
+
+        }
+
+
+
         // DAL for Form 2 "PropertyType"
 
 

@@ -30,7 +30,6 @@ C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\bin\Debug\BLL.dll
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\bin\Debug\DAL.dll
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\bin\Debug\BLL.pdb
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\bin\Debug\DAL.pdb
-C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.csproj.AssemblyReference.cache
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.HomePage.resources
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.Form10.resources
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.Form11.resources
@@ -48,3 +47,5 @@ C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.csproj.CopyComplete
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.exe
 C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.pdb
+C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.Form12.resources
+C:\Git_Hub\ONT_2000_Project\ONT_Project_Semester2\obj\Debug\ONT_Project_Semester2.csproj.AssemblyReference.cache

@@ -4,3 +4,8 @@ C:\Users\conno\source\repos\ONT_Project_Semester2\DAL\obj\Debug\DAL.csproj.Assem
 C:\Users\conno\source\repos\ONT_Project_Semester2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\conno\source\repos\ONT_Project_Semester2\DAL\obj\Debug\DAL.dll
 C:\Users\conno\source\repos\ONT_Project_Semester2\DAL\obj\Debug\DAL.pdb
+C:\Git_Hub\ONT_2000_Project\DAL\bin\Debug\DAL.dll
+C:\Git_Hub\ONT_2000_Project\DAL\bin\Debug\DAL.pdb
+C:\Git_Hub\ONT_2000_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Git_Hub\ONT_2000_Project\DAL\obj\Debug\DAL.dll
+C:\Git_Hub\ONT_2000_Project\DAL\obj\Debug\DAL.pdb

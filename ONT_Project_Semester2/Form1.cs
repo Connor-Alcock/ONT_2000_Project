@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DAL;
+using BLL;
 
 
 namespace ONT_Project_Semester2
@@ -21,9 +23,15 @@ namespace ONT_Project_Semester2
             InitializeComponent();
         }
 
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
+            cmbUserType.Items.Add("Admin");
+            cmbUserType.Items.Add("Agent");
+            cmbUserType.Items.Add("Tenant");
+
         }
 
         private void ProptertyType_Click(object sender, EventArgs e)
@@ -95,6 +103,83 @@ namespace ONT_Project_Semester2
             Form11 form = new Form11();
             form.Show();
             this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            if (cmbUserType.SelectedItem.Equals("Agent"))
+            {
+                DataTable dt = bll.GetLoginAgent(txtUserName.Text, txtUserPassoword.Text);
+
+                string userName, userPassword;
+
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        userName = txtUserName.Text;
+                        userPassword = txtUserPassoword.Text;
+
+                        Form2 form = new Form2();
+                        form.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUserName.Clear();
+                        txtUserPassoword.Clear();
+                        txtUserName.Focus();
+
+                    }
+                }
+                catch
+                {
+
+                    MessageBox.Show("Error");
+
+                }
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtUserName.Clear();
+            txtUserPassoword.Clear();
+            txtUserName.Focus();
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult res;
+            res = MessageBox.Show("Do you want to exit", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes)
+            {
+
+                Application.Exit();
+
+            }
+            else
+            {
+
+                this.Show();
+
+            }
         }
     }
 }

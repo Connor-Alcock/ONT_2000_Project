@@ -95,5 +95,13 @@ namespace ONT_Project_Semester2
                 errorProvider1.SetError(txtPropertyTypeDescription, "");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form11 form2 = new Form11();
+            form2.Show();
+            this.Hide();
+
+        }
     }
 }

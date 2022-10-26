@@ -49,11 +49,15 @@ namespace ONT_Project_Semester2
             this.dgvRentals = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRentals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -127,6 +131,7 @@ namespace ONT_Project_Semester2
             this.StartDate.Size = new System.Drawing.Size(318, 27);
             this.StartDate.TabIndex = 3;
             this.StartDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.StartDate.Validating += new System.ComponentModel.CancelEventHandler(this.StartDate_Validating);
             // 
             // EndDate
             // 
@@ -135,6 +140,7 @@ namespace ONT_Project_Semester2
             this.EndDate.Size = new System.Drawing.Size(318, 27);
             this.EndDate.TabIndex = 3;
             this.EndDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.EndDate.Validating += new System.ComponentModel.CancelEventHandler(this.EndDate_Validating);
             // 
             // cmbTenatID
             // 
@@ -238,6 +244,14 @@ namespace ONT_Project_Semester2
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
             // Form11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -254,6 +268,8 @@ namespace ONT_Project_Semester2
             ((System.ComponentModel.ISupportInitialize)(this.dgvRentals)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,5 +295,7 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.DataGridView dgvRentals;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
     }
 }
