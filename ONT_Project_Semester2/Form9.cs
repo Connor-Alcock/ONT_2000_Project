@@ -130,5 +130,100 @@ namespace ONT_Project_Semester2
             string title = "Delete";
             MessageBox.Show(message, title);
         }
+
+        private void txtName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                e.Cancel = true;
+                txtName.Focus();
+                errorProvider1.SetError(txtName, "Tenant Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtName, "");
+            }
+        }
+
+        private void txtSurname_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSurname.Text))
+            {
+                e.Cancel = true;
+               txtSurname.Focus();
+                errorProvider2.SetError(txtSurname, "Tenant Surname should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(txtSurname, "");
+            }
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                e.Cancel = true;
+                txtEmail.Focus();
+                errorProvider3.SetError(txtEmail, "Tenant Email should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider3.SetError(txtEmail, "");
+            }
+        }
+
+        private void txtPassword_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                e.Cancel = true;
+                txtPassword.Focus();
+                errorProvider4.SetError(txtPassword, "Tenant Password should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider4.SetError(txtPassword, "");
+            }
+        }
+
+        private void txtPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPhone.Text))
+            {
+                e.Cancel = true;
+                txtPhone.Focus();
+                errorProvider5.SetError(txtPhone, "Tenant Phone should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider5.SetError(txtPhone, "");
+            }
+        }
+
+        private void cmbStatus_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbStatus.Text))
+            {
+                e.Cancel = true;
+                cmbStatus.Focus();
+                errorProvider6.SetError(cmbStatus, "Staus should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider6.SetError(cmbStatus, "");
+            }
+        }
     }
 }

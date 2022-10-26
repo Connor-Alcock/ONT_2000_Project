@@ -28,6 +28,7 @@ namespace ONT_Project_Semester2
             cmbCity.DataSource = bll.GetCity();
             cmbCity.DisplayMember = "CityDescription";
             cmbCity.ValueMember = "CityID";
+            cmbCity.SelectedIndex = -1;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -76,6 +77,56 @@ namespace ONT_Project_Semester2
         private void txtPostalCode_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSuburbDescription_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSuburbDescription_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSuburbDescription.Text))
+            {
+                e.Cancel = true;
+                txtSuburbDescription.Focus();
+                errorProvider1.SetError(txtSuburbDescription, "Suburb Description should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtSuburbDescription, "");
+            }
+        }
+
+        private void txtPostalCode_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPostalCode.Text))
+            {
+                e.Cancel = true;
+                txtPostalCode.Focus();
+                errorProvider2.SetError(txtPostalCode, "Postal Code should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(txtPostalCode, "");
+            }
+        }
+
+        private void cmbCity_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbCity.Text))
+            {
+                e.Cancel = true;
+                cmbCity.Focus();
+                errorProvider3.SetError(cmbCity, "City should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider3.SetError(cmbCity, "");
+            }
         }
     }
 }

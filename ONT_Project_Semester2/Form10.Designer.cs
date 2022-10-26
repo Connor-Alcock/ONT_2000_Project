@@ -29,6 +29,7 @@ namespace ONT_Project_Semester2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnListPropertyAgent = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -44,9 +45,13 @@ namespace ONT_Project_Semester2
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvPropertyAgent = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -118,6 +123,7 @@ namespace ONT_Project_Semester2
             this.cmbAgentID.Name = "cmbAgentID";
             this.cmbAgentID.Size = new System.Drawing.Size(449, 28);
             this.cmbAgentID.TabIndex = 3;
+            this.cmbAgentID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbAgentID_Validating);
             // 
             // cmbPropertyID
             // 
@@ -126,6 +132,7 @@ namespace ONT_Project_Semester2
             this.cmbPropertyID.Name = "cmbPropertyID";
             this.cmbPropertyID.Size = new System.Drawing.Size(449, 28);
             this.cmbPropertyID.TabIndex = 3;
+            this.cmbPropertyID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPropertyID_Validating);
             // 
             // txtPropertyAgentID
             // 
@@ -140,6 +147,7 @@ namespace ONT_Project_Semester2
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(315, 27);
             this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker1_Validating);
             // 
             // label3
             // 
@@ -201,6 +209,14 @@ namespace ONT_Project_Semester2
             this.dgvPropertyAgent.TabIndex = 0;
             this.dgvPropertyAgent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropertyAgent_CellClick);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,6 +231,8 @@ namespace ONT_Project_Semester2
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropertyAgent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +254,7 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvPropertyAgent;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

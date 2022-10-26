@@ -29,6 +29,7 @@ namespace ONT_Project_Semester2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.home = new System.Windows.Forms.Button();
             this.btnListRentals = new System.Windows.Forms.Button();
@@ -46,9 +47,13 @@ namespace ONT_Project_Semester2
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvRentals = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRentals)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -139,6 +144,7 @@ namespace ONT_Project_Semester2
             this.cmbTenatID.Size = new System.Drawing.Size(425, 28);
             this.cmbTenatID.TabIndex = 2;
             this.cmbTenatID.SelectedIndexChanged += new System.EventHandler(this.cmbTenantID_SelectedIndexChanged);
+            this.cmbTenatID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbTenatID_Validating);
             // 
             // cmbPropertyAgentID
             // 
@@ -148,6 +154,7 @@ namespace ONT_Project_Semester2
             this.cmbPropertyAgentID.Size = new System.Drawing.Size(425, 28);
             this.cmbPropertyAgentID.TabIndex = 2;
             this.cmbPropertyAgentID.SelectedIndexChanged += new System.EventHandler(this.cmbTenantID_SelectedIndexChanged);
+            this.cmbPropertyAgentID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPropertyAgentID_Validating);
             // 
             // txtRenatalID
             // 
@@ -223,6 +230,14 @@ namespace ONT_Project_Semester2
             this.dgvRentals.TabIndex = 0;
             this.dgvRentals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRentals_CellClick);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // Form11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,6 +252,8 @@ namespace ONT_Project_Semester2
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRentals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +277,7 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvRentals;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

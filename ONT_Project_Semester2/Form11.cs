@@ -108,5 +108,35 @@ namespace ONT_Project_Semester2
             string title = "Updated";
             MessageBox.Show(message, title);
         }
-    }
+
+        private void cmbPropertyAgentID_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbPropertyAgentID.Text))
+            {
+                e.Cancel = true;
+                cmbPropertyAgentID.Focus();
+                errorProvider1.SetError(cmbPropertyAgentID, "Property Agent ID should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(cmbPropertyAgentID, "");
+            }
+        }
+
+        private void cmbTenatID_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbTenatID.Text))
+            {
+                e.Cancel = true;
+                cmbTenatID.Focus();
+                errorProvider2.SetError(cmbTenatID, "Tenant ID should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(cmbTenatID, "");
+            }
+        }
+    }   
 }

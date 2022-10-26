@@ -67,6 +67,7 @@ namespace ONT_Project_Semester2
             cmbProvince.DataSource = bll.GetProvince();
             cmbProvince.DisplayMember = "ProvinceDescription";
             cmbProvince.ValueMember = "ProvinceID";
+            cmbProvince.SelectedIndex = -1;
 
         }
 
@@ -98,6 +99,31 @@ namespace ONT_Project_Semester2
                 e.Cancel = false;
                 errorProvider1.SetError(txtCityDescription, "");
             }
+        }
+
+        private void txtCityDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbProvince_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbProvince.Text))
+            {
+                e.Cancel = true;
+                cmbProvince.Focus();
+                errorProvider2.SetError(cmbProvince, "Province should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(cmbProvince, "");
+            }
+        }
+
+        private void dgvCities_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+             
         }
     }
 }

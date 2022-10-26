@@ -29,6 +29,7 @@ namespace ONT_Project_Semester2
             cmbSuburbID.DataSource = bll.GetSuburb();
             cmbSuburbID.DisplayMember = "SuburbDescription";
             cmbSuburbID.ValueMember = "SuburbID";
+            cmbSuburbID.SelectedIndex = -1;
 
         }
 
@@ -80,6 +81,37 @@ namespace ONT_Project_Semester2
                 txtAgencyID.Text = dgvAgencies.SelectedRows[0].Cells["AgencyID"].Value.ToString();
                 txtAgencyName.Text = dgvAgencies.SelectedRows[0].Cells["AgencyName"].Value.ToString();
                 cmbSuburbID.Text = dgvAgencies.SelectedRows[0].Cells["SuburbID"].Value.ToString();
+            }
+        }
+
+        private void txtAgencyName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAgencyName.Text))
+            {
+                e.Cancel = true;
+                txtAgencyName.Focus();
+                errorProvider1.SetError(txtAgencyName, "Agency Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtAgencyName, "");
+            }
+
+        }
+
+        private void cmbSuburbID_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbSuburbID.Text))
+            {
+                e.Cancel = true;
+                cmbSuburbID.Focus();
+                errorProvider2.SetError(cmbSuburbID, "Suburb ID should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(cmbSuburbID, "");
             }
         }
     }

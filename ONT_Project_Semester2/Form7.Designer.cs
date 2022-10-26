@@ -29,6 +29,7 @@ namespace ONT_Project_Semester2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -43,9 +44,13 @@ namespace ONT_Project_Semester2
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvAgencies = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgencies)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -116,6 +121,7 @@ namespace ONT_Project_Semester2
             this.cmbSuburbID.Name = "cmbSuburbID";
             this.cmbSuburbID.Size = new System.Drawing.Size(424, 28);
             this.cmbSuburbID.TabIndex = 2;
+            this.cmbSuburbID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbSuburbID_Validating);
             // 
             // txtAgencyName
             // 
@@ -123,6 +129,7 @@ namespace ONT_Project_Semester2
             this.txtAgencyName.Name = "txtAgencyName";
             this.txtAgencyName.Size = new System.Drawing.Size(424, 27);
             this.txtAgencyName.TabIndex = 1;
+            this.txtAgencyName.Validating += new System.ComponentModel.CancelEventHandler(this.txtAgencyName_Validating);
             // 
             // txtAgencyID
             // 
@@ -188,6 +195,14 @@ namespace ONT_Project_Semester2
             this.dgvAgencies.TabIndex = 0;
             this.dgvAgencies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgencies_CellClick);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,6 +217,8 @@ namespace ONT_Project_Semester2
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgencies)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +239,7 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvAgencies;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

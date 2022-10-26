@@ -29,7 +29,9 @@ namespace ONT_Project_Semester2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnListSuburb = new System.Windows.Forms.Button();
             this.cmbCity = new System.Windows.Forms.ComboBox();
@@ -42,10 +44,15 @@ namespace ONT_Project_Semester2
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvSuburb = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuburb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -68,6 +75,16 @@ namespace ONT_Project_Semester2
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Suburbs";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(231, 204);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(168, 40);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnHome
             // 
@@ -97,6 +114,7 @@ namespace ONT_Project_Semester2
             this.cmbCity.Size = new System.Drawing.Size(437, 28);
             this.cmbCity.TabIndex = 2;
             this.cmbCity.SelectedIndexChanged += new System.EventHandler(this.cmbCityID_SelectedIndexChanged);
+            this.cmbCity.Validating += new System.ComponentModel.CancelEventHandler(this.cmbCity_Validating);
             // 
             // txtPostalCode
             // 
@@ -105,6 +123,7 @@ namespace ONT_Project_Semester2
             this.txtPostalCode.Size = new System.Drawing.Size(450, 27);
             this.txtPostalCode.TabIndex = 1;
             this.txtPostalCode.TextChanged += new System.EventHandler(this.txtPostalCode_TextChanged);
+            this.txtPostalCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtPostalCode_Validating);
             // 
             // txtSuburbDescription
             // 
@@ -112,6 +131,8 @@ namespace ONT_Project_Semester2
             this.txtSuburbDescription.Name = "txtSuburbDescription";
             this.txtSuburbDescription.Size = new System.Drawing.Size(450, 27);
             this.txtSuburbDescription.TabIndex = 1;
+            this.txtSuburbDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtSuburbDescription_Validating);
+            this.txtSuburbDescription.Validated += new System.EventHandler(this.txtSuburbDescription_Validated);
             // 
             // txtSuburbID
             // 
@@ -178,15 +199,17 @@ namespace ONT_Project_Semester2
             this.dgvSuburb.Size = new System.Drawing.Size(751, 171);
             this.dgvSuburb.TabIndex = 0;
             // 
-            // btnAdd
+            // errorProvider1
             // 
-            this.btnAdd.Location = new System.Drawing.Point(231, 204);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(168, 40);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
             // 
             // Form6
             // 
@@ -202,6 +225,9 @@ namespace ONT_Project_Semester2
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuburb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +248,8 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvSuburb;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }

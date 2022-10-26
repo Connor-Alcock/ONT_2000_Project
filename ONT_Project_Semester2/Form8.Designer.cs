@@ -29,7 +29,9 @@ namespace ONT_Project_Semester2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtName = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnListAgent = new System.Windows.Forms.Button();
@@ -52,10 +54,23 @@ namespace ONT_Project_Semester2
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvAgent = new System.Windows.Forms.DataGridView();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtName.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
             this.SuspendLayout();
             // 
             // txtName
@@ -87,6 +102,16 @@ namespace ONT_Project_Semester2
             this.txtName.TabIndex = 0;
             this.txtName.TabStop = false;
             this.txtName.Text = "Agencts";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(195, 457);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(130, 43);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update Agent";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -135,6 +160,7 @@ namespace ONT_Project_Semester2
             this.cmbAgencyID.Name = "cmbAgencyID";
             this.cmbAgencyID.Size = new System.Drawing.Size(474, 24);
             this.cmbAgencyID.TabIndex = 2;
+            this.cmbAgencyID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbAgencyID_Validating);
             // 
             // cmbStatus
             // 
@@ -144,6 +170,7 @@ namespace ONT_Project_Semester2
             this.cmbStatus.Size = new System.Drawing.Size(474, 24);
             this.cmbStatus.TabIndex = 2;
             this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
+            this.cmbStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cmbStatus_Validating);
             // 
             // txtAgentID
             // 
@@ -158,6 +185,7 @@ namespace ONT_Project_Semester2
             this.txtAgentPhone.Name = "txtAgentPhone";
             this.txtAgentPhone.Size = new System.Drawing.Size(474, 22);
             this.txtAgentPhone.TabIndex = 1;
+            this.txtAgentPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtAgentPhone_Validating);
             // 
             // txtAgentPassword
             // 
@@ -165,6 +193,7 @@ namespace ONT_Project_Semester2
             this.txtAgentPassword.Name = "txtAgentPassword";
             this.txtAgentPassword.Size = new System.Drawing.Size(474, 22);
             this.txtAgentPassword.TabIndex = 1;
+            this.txtAgentPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtAgentPassword_Validating);
             // 
             // txtAgentEmail
             // 
@@ -172,6 +201,7 @@ namespace ONT_Project_Semester2
             this.txtAgentEmail.Name = "txtAgentEmail";
             this.txtAgentEmail.Size = new System.Drawing.Size(474, 22);
             this.txtAgentEmail.TabIndex = 1;
+            this.txtAgentEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtAgentEmail_Validating);
             // 
             // txtAgentSurname
             // 
@@ -179,6 +209,7 @@ namespace ONT_Project_Semester2
             this.txtAgentSurname.Name = "txtAgentSurname";
             this.txtAgentSurname.Size = new System.Drawing.Size(474, 22);
             this.txtAgentSurname.TabIndex = 1;
+            this.txtAgentSurname.Validating += new System.ComponentModel.CancelEventHandler(this.txtAgentSurname_Validating);
             // 
             // txtAgentName
             // 
@@ -186,6 +217,8 @@ namespace ONT_Project_Semester2
             this.txtAgentName.Name = "txtAgentName";
             this.txtAgentName.Size = new System.Drawing.Size(474, 22);
             this.txtAgentName.TabIndex = 1;
+            this.txtAgentName.Validating += new System.ComponentModel.CancelEventHandler(this.txtAgentName_Validating);
+            this.txtAgentName.Validated += new System.EventHandler(this.txtAgentName_Validated);
             // 
             // label8
             // 
@@ -294,15 +327,33 @@ namespace ONT_Project_Semester2
             this.dgvAgent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellClick);
             this.dgvAgent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellContentClick);
             // 
-            // btnUpdate
+            // errorProvider1
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(195, 457);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(130, 43);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Update Agent";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
             // 
             // Form8
             // 
@@ -318,6 +369,13 @@ namespace ONT_Project_Semester2
             this.txtName.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,5 +406,12 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvAgent;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
     }
 }
