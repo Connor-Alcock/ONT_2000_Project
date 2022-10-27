@@ -290,5 +290,36 @@ namespace BLL
 
         }
 
+
+        //BLL for Reports
+
+
+        public DataTable GetReport1()
+        {
+
+            return dal.GetReport1();
+
+        }
+
+        public DataTable GetReport2()
+        {
+
+            return dal.GetReport2();
+
+        }
+        public DataTable GetReport3()
+        {
+
+            return dal.GetReport3();
+
+        }
+        public DataTable GetReport4()
+        {
+
+            return dal.GetReport4();
+
+        }
+
+
     }
 }

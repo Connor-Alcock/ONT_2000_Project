@@ -254,5 +254,12 @@ namespace ONT_Project_Semester2
 
             }
         }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            Form16 form = new Form16();
+            form.Show();
+            this.Hide(); 
+        }
     }
 }

@@ -588,5 +588,71 @@ namespace DAL
             dbConn.Close();
             return dt;
         }
+
+
+        //DAl for Reports
+
+
+        public DataTable GetReport1()
+        {
+            dbConn.Open();
+
+            dbComm = new SqlCommand("sp_GetReport1", dbConn);
+
+            dt = new DataTable();
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+
+            dbAdapter.Fill(dt);
+
+            dbConn.Close();
+            return dt;
+        }
+        public DataTable GetReport2()
+        {
+            dbConn.Open();
+
+            dbComm = new SqlCommand("sp_GetReport2", dbConn);
+
+            dt = new DataTable();
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+
+            dbAdapter.Fill(dt);
+
+            dbConn.Close();
+            return dt;
+        }
+        public DataTable GetReport3()
+        {
+            dbConn.Open();
+
+            dbComm = new SqlCommand("sp_GetReport3", dbConn);
+
+            dt = new DataTable();
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+
+            dbAdapter.Fill(dt);
+
+            dbConn.Close();
+            return dt;
+        }
+        public DataTable GetReport4()
+        {
+            dbConn.Open();
+
+            dbComm = new SqlCommand("sp_GetReport4", dbConn);
+
+            dt = new DataTable();
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+
+            dbAdapter.Fill(dt);
+
+            dbConn.Close();
+            return dt;
+        }
+
     }
 }
