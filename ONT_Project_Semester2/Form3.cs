@@ -109,6 +109,10 @@ namespace ONT_Project_Semester2
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+
+            if x = 1;
+
+            { 
             HomePage form = new HomePage();
             form.Show();
             this.Hide();
