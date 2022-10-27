@@ -33,7 +33,44 @@ namespace ONT_Project_Semester2
 
         private void btnPropertyType_Click(object sender, EventArgs e)
         {
+            Form2 form = new Form2();
+            form.Show();
+            this.Hide();
+        }
 
+        private void btnProvince_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnCities_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnSuburbs_Click(object sender, EventArgs e)
+        {
+            Form6 form = new Form6();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnAgencies_Click(object sender, EventArgs e)
+        {
+            Form7 form = new Form7();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnAgents_Click(object sender, EventArgs e)
+        {
+            Form8 form = new Form8();
+            form.Show();
+            this.Hide();
         }
     }
 }
