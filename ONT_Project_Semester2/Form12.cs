@@ -22,6 +22,8 @@ namespace ONT_Project_Semester2
             Form3 form = new Form3();
             form.Show();
             this.Hide();
+
+            
         }
 
         private void btnRentals_Click(object sender, EventArgs e)

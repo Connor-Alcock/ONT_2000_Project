@@ -21,5 +21,12 @@ namespace ONT_Project_Semester2
         {
 
         }
+
+        private void btnRental_Click(object sender, EventArgs e)
+        {
+            Form11 form = new Form11();
+            form.Show();
+            this.Hide();
+        }
     }
 }

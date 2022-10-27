@@ -81,7 +81,7 @@ namespace ONT_Project_Semester2
             // 
             this.btnLogout.Location = new System.Drawing.Point(7, 397);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 31);
+            this.btnLogout.Size = new System.Drawing.Size(83, 31);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@ namespace ONT_Project_Semester2
             // 
             this.btnExit.Location = new System.Drawing.Point(7, 434);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 31);
+            this.btnExit.Size = new System.Drawing.Size(83, 31);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
