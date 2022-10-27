@@ -61,7 +61,7 @@ namespace ONT_Project_Semester2
             cmbSuburb.SelectedIndex = -1;
 
         }
-
+    
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -110,12 +110,10 @@ namespace ONT_Project_Semester2
         private void btnHome_Click(object sender, EventArgs e)
         {
 
-            if x = 1;
-
-            { 
-            HomePage form = new HomePage();
-            form.Show();
-            this.Hide();
+                HomePage form = new HomePage();
+                form.Show();
+                this.Hide();
+            
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
