@@ -117,7 +117,7 @@ namespace ONT_Project_Semester2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            
             if (cmbUserType.SelectedItem.Equals("Agent"))
             {
                 DataTable dt = bll.GetLoginAgent(txtUserName.Text, txtUserPassoword.Text);
@@ -132,7 +132,11 @@ namespace ONT_Project_Semester2
                         userName = txtUserName.Text;
                         userPassword = txtUserPassoword.Text;
 
-                        Form12 form = new Form12();
+                        UserAccess.Instance.UserType = cmbUserType.SelectedItem.ToString();
+                        UserAccess.Instance.username = txtUserName.Text;
+                        UserAccess.Instance.password = txtUserPassoword.Text;
+
+                      Form12 form = new Form12();
                         form.Show();
                         this.Hide();
 
@@ -167,6 +171,10 @@ namespace ONT_Project_Semester2
 
                         userName = txtUserName.Text;
                         userPassword = txtUserPassoword.Text;
+
+                        UserAccess.Instance.UserType = cmbUserType.SelectedItem.ToString();
+                        UserAccess.Instance.username = txtUserName.Text;
+                        UserAccess.Instance.password = txtUserPassoword.Text;
 
                         Form13 form = new Form13();
                         form.Show();
@@ -203,6 +211,10 @@ namespace ONT_Project_Semester2
 
                         userName = txtUserName.Text;
                         userPassword = txtUserPassoword.Text;
+
+                        UserAccess.Instance.UserType = cmbUserType.SelectedItem.ToString();
+                        UserAccess.Instance.username = txtUserName.Text;
+                        UserAccess.Instance.password = txtUserPassoword.Text;
 
                         Form14 form = new Form14();
                         form.Show();

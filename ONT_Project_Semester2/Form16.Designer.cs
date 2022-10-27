@@ -37,10 +37,10 @@ namespace ONT_Project_Semester2
             this.btnReport3 = new System.Windows.Forms.Button();
             this.btnReport2 = new System.Windows.Forms.Button();
             this.btnReport1 = new System.Windows.Forms.Button();
+            this.userControl41 = new ONT_Project_Semester2.UserControl4();
             this.userControl31 = new ONT_Project_Semester2.UserControl3();
             this.userControl21 = new ONT_Project_Semester2.UserControl2();
             this.Report1 = new ONT_Project_Semester2.Report1();
-            this.userControl41 = new ONT_Project_Semester2.UserControl4();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,9 +129,17 @@ namespace ONT_Project_Semester2
             this.btnReport1.UseVisualStyleBackColor = true;
             this.btnReport1.Click += new System.EventHandler(this.btnReport1_Click);
             // 
+            // userControl41
+            // 
+            this.userControl41.Location = new System.Drawing.Point(357, 150);
+            this.userControl41.Margin = new System.Windows.Forms.Padding(4);
+            this.userControl41.Name = "userControl41";
+            this.userControl41.Size = new System.Drawing.Size(950, 525);
+            this.userControl41.TabIndex = 4;
+            // 
             // userControl31
             // 
-            this.userControl31.Location = new System.Drawing.Point(204, 35);
+            this.userControl31.Location = new System.Drawing.Point(304, 102);
             this.userControl31.Margin = new System.Windows.Forms.Padding(4);
             this.userControl31.Name = "userControl31";
             this.userControl31.Size = new System.Drawing.Size(950, 525);
@@ -139,7 +147,7 @@ namespace ONT_Project_Semester2
             // 
             // userControl21
             // 
-            this.userControl21.Location = new System.Drawing.Point(204, 35);
+            this.userControl21.Location = new System.Drawing.Point(250, 54);
             this.userControl21.Margin = new System.Windows.Forms.Padding(4);
             this.userControl21.Name = "userControl21";
             this.userControl21.Size = new System.Drawing.Size(950, 525);
@@ -152,14 +160,6 @@ namespace ONT_Project_Semester2
             this.Report1.Name = "Report1";
             this.Report1.Size = new System.Drawing.Size(950, 525);
             this.Report1.TabIndex = 1;
-            // 
-            // userControl41
-            // 
-            this.userControl41.Location = new System.Drawing.Point(204, 35);
-            this.userControl41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.userControl41.Name = "userControl41";
-            this.userControl41.Size = new System.Drawing.Size(950, 525);
-            this.userControl41.TabIndex = 4;
             // 
             // Form16
             // 

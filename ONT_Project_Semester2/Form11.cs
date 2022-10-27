@@ -34,9 +34,27 @@ namespace ONT_Project_Semester2
 
         private void home_Click(object sender, EventArgs e)
         {
-            HomePage form = new HomePage();
-            form.Show();
-            this.Hide();
+
+            if(UserAccess.Instance.UserType.Equals("Agent"))
+            {
+
+                Form12 form12 = new Form12();
+                form12.Show();
+                this.Hide();
+
+
+            }
+            else
+            {
+
+                Form14 form14 = new Form14();
+                form14.Show();
+                this.Hide();
+
+            }
+
+           
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

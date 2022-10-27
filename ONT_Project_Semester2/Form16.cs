@@ -26,8 +26,8 @@ namespace ONT_Project_Semester2
         private void btnReport1_Click(object sender, EventArgs e)
         {
 
-            Report1 report1 = new Report1();
-            report1.BringToFront();
+            //Report1 report1 = new Report1();
+            Report1.BringToFront();
 
         }
     }
