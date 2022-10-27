@@ -35,6 +35,32 @@ namespace DAL
 
         }
 
+        public DataTable GetAdminLogin(string AdminEmail, string AdminPassword)
+        {
+            dbComm = new SqlCommand("sp_GetAdminLogin", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@AdminEmail", AdminEmail);
+            dbComm.Parameters.AddWithValue("@AdminPassword", AdminPassword);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+        }
+
+        public DataTable GetTenantLogin(string Email, string Password)
+        {
+            dbComm = new SqlCommand("sp_GetTenantLogin", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Email", Email);
+            dbComm.Parameters.AddWithValue("@Password", Password);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+        }
+
 
 
 

@@ -9,3 +9,4 @@ C:\Git_Hub\ONT_2000_Project\DAL\bin\Debug\DAL.pdb
 C:\Git_Hub\ONT_2000_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Git_Hub\ONT_2000_Project\DAL\obj\Debug\DAL.dll
 C:\Git_Hub\ONT_2000_Project\DAL\obj\Debug\DAL.pdb
+C:\Git_Hub\ONT_2000_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache

@@ -132,7 +132,7 @@ namespace ONT_Project_Semester2
                         userName = txtUserName.Text;
                         userPassword = txtUserPassoword.Text;
 
-                        Form2 form = new Form2();
+                        Form12 form = new Form12();
                         form.Show();
                         this.Hide();
 
@@ -154,6 +154,79 @@ namespace ONT_Project_Semester2
 
                 }
             }
+            else if(cmbUserType.SelectedItem.Equals("Admin"))
+            {
+                DataTable dt = bll.GetAdminLogin(txtUserName.Text, txtUserPassoword.Text);
+
+                string userName, userPassword;
+
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        userName = txtUserName.Text;
+                        userPassword = txtUserPassoword.Text;
+
+                        Form13 form = new Form13();
+                        form.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUserName.Clear();
+                        txtUserPassoword.Clear();
+                        txtUserName.Focus();
+
+                    }
+                }
+                catch
+                {
+
+                    MessageBox.Show("Error");
+
+                }
+            }
+            else if (cmbUserType.SelectedItem.Equals("Tenant"))
+            {
+                DataTable dt = bll.getTenantLogin(txtUserName.Text, txtUserPassoword.Text);
+
+                string userName, userPassword;
+
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        userName = txtUserName.Text;
+                        userPassword = txtUserPassoword.Text;
+
+                        Form14 form = new Form14();
+                        form.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUserName.Clear();
+                        txtUserPassoword.Clear();
+                        txtUserName.Focus();
+
+                    }
+                }
+                catch
+                {
+
+                    MessageBox.Show("Error");
+
+                }
+            }
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)

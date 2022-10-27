@@ -25,6 +25,20 @@ namespace BLL
 
         }
 
+        public DataTable GetAdminLogin(string AdminEmail, string AdminPassword)
+        {
+
+            return dal.GetAdminLogin(AdminEmail, AdminPassword);
+
+        }
+
+        public DataTable getTenantLogin(string Email, string Password)
+        {
+
+            return dal.GetTenantLogin(Email, Password);
+
+        }
+
 
 
         // DAL for Form 2 "PropertyType"

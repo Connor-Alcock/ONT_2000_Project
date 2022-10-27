@@ -66,11 +66,11 @@ namespace ONT_Project_Semester2
             this.groupBox1.Controls.Add(this.btnListRentals);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.txtRenatalID);
+            this.groupBox1.Controls.Add(this.cmbPropertyAgentID);
+            this.groupBox1.Controls.Add(this.cmbTenatID);
             this.groupBox1.Controls.Add(this.StartDate);
             this.groupBox1.Controls.Add(this.EndDate);
-            this.groupBox1.Controls.Add(this.cmbTenatID);
-            this.groupBox1.Controls.Add(this.cmbPropertyAgentID);
-            this.groupBox1.Controls.Add(this.txtRenatalID);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
