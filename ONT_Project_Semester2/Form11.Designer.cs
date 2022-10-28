@@ -35,11 +35,11 @@ namespace ONT_Project_Semester2
             this.btnListRentals = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtRenatalID = new System.Windows.Forms.TextBox();
+            this.cmbPropertyAgentID = new System.Windows.Forms.ComboBox();
+            this.cmbTenatID = new System.Windows.Forms.ComboBox();
             this.StartDate = new System.Windows.Forms.DateTimePicker();
             this.EndDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbTenatID = new System.Windows.Forms.ComboBox();
-            this.cmbPropertyAgentID = new System.Windows.Forms.ComboBox();
-            this.txtRenatalID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -124,33 +124,12 @@ namespace ONT_Project_Semester2
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // StartDate
+            // txtRenatalID
             // 
-            this.StartDate.Location = new System.Drawing.Point(286, 176);
-            this.StartDate.Name = "StartDate";
-            this.StartDate.Size = new System.Drawing.Size(318, 27);
-            this.StartDate.TabIndex = 3;
-            this.StartDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            this.StartDate.Validating += new System.ComponentModel.CancelEventHandler(this.StartDate_Validating);
-            // 
-            // EndDate
-            // 
-            this.EndDate.Location = new System.Drawing.Point(286, 210);
-            this.EndDate.Name = "EndDate";
-            this.EndDate.Size = new System.Drawing.Size(318, 27);
-            this.EndDate.TabIndex = 3;
-            this.EndDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            this.EndDate.Validating += new System.ComponentModel.CancelEventHandler(this.EndDate_Validating);
-            // 
-            // cmbTenatID
-            // 
-            this.cmbTenatID.FormattingEnabled = true;
-            this.cmbTenatID.Location = new System.Drawing.Point(286, 136);
-            this.cmbTenatID.Name = "cmbTenatID";
-            this.cmbTenatID.Size = new System.Drawing.Size(425, 28);
-            this.cmbTenatID.TabIndex = 2;
-            this.cmbTenatID.SelectedIndexChanged += new System.EventHandler(this.cmbTenantID_SelectedIndexChanged);
-            this.cmbTenatID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbTenatID_Validating);
+            this.txtRenatalID.Location = new System.Drawing.Point(286, 63);
+            this.txtRenatalID.Name = "txtRenatalID";
+            this.txtRenatalID.Size = new System.Drawing.Size(429, 27);
+            this.txtRenatalID.TabIndex = 1;
             // 
             // cmbPropertyAgentID
             // 
@@ -162,12 +141,31 @@ namespace ONT_Project_Semester2
             this.cmbPropertyAgentID.SelectedIndexChanged += new System.EventHandler(this.cmbTenantID_SelectedIndexChanged);
             this.cmbPropertyAgentID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPropertyAgentID_Validating);
             // 
-            // txtRenatalID
+            // cmbTenatID
             // 
-            this.txtRenatalID.Location = new System.Drawing.Point(286, 63);
-            this.txtRenatalID.Name = "txtRenatalID";
-            this.txtRenatalID.Size = new System.Drawing.Size(429, 27);
-            this.txtRenatalID.TabIndex = 1;
+            this.cmbTenatID.FormattingEnabled = true;
+            this.cmbTenatID.Location = new System.Drawing.Point(286, 136);
+            this.cmbTenatID.Name = "cmbTenatID";
+            this.cmbTenatID.Size = new System.Drawing.Size(425, 28);
+            this.cmbTenatID.TabIndex = 2;
+            this.cmbTenatID.SelectedIndexChanged += new System.EventHandler(this.cmbTenantID_SelectedIndexChanged);
+            this.cmbTenatID.Validating += new System.ComponentModel.CancelEventHandler(this.cmbTenatID_Validating);
+            // 
+            // StartDate
+            // 
+            this.StartDate.Location = new System.Drawing.Point(286, 176);
+            this.StartDate.Name = "StartDate";
+            this.StartDate.Size = new System.Drawing.Size(318, 27);
+            this.StartDate.TabIndex = 3;
+            this.StartDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // EndDate
+            // 
+            this.EndDate.Location = new System.Drawing.Point(286, 210);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(318, 27);
+            this.EndDate.TabIndex = 3;
+            this.EndDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 

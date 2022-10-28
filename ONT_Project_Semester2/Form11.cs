@@ -27,11 +27,6 @@ namespace ONT_Project_Semester2
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void home_Click(object sender, EventArgs e)
         {
 
@@ -169,35 +164,12 @@ namespace ONT_Project_Semester2
 
         private void StartDate_Validating(object sender, CancelEventArgs e)
         {
-            if (StartDate.Value < EndDate.Value)
-            {
-                e.Cancel = true;
-
-                errorProvider3.SetError(StartDate, "Starting rental date can not be later that ending rental date");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider3.SetError(StartDate, "");
-            }
 
         }
 
-        private void EndDate_Validating(object sender, CancelEventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if (EndDate.Value > StartDate.Value)
-            {
-                e.Cancel = true;
 
-                errorProvider4.SetError(EndDate, "Ending rental date can not be sooner that starting rental date");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider4.SetError(EndDate, "");
-            }
         }
     }   
 }

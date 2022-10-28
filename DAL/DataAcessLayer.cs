@@ -24,7 +24,7 @@ namespace DAL
 
         public DataTable GetLoginAgent(string Email, string Password)
         {
-            dbComm = new SqlCommand("sp_GetloginAgent", dbConn);
+            dbComm = new SqlCommand("sp_GetLoginAgent", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
             dbComm.Parameters.AddWithValue("@Email", Email);
             dbComm.Parameters.AddWithValue("@Password", Password);
@@ -580,7 +580,7 @@ namespace DAL
             dbComm.Parameters.AddWithValue("@PropertyAgentID", rentals.PropertyAgentID);
             dbComm.Parameters.AddWithValue("@TenantID", rentals.TenantID);
             dbComm.Parameters.AddWithValue("@StartDate", rentals.StartDate);
-            dbComm.Parameters.AddWithValue("@EndDate", rentals.StartDate);
+            dbComm.Parameters.AddWithValue("@EndDate", rentals.EndDate);
 
 
             int x = dbComm.ExecuteNonQuery();

@@ -55,6 +55,7 @@ namespace ONT_Project_Semester2
             Tenant tenant = new Tenant();
 
             tenant.TenantEmail = txtEmail.Text;
+            tenant.TenantPassword = txtPassword.Text;
             tenant.TenantPhone = int.Parse(txtPhone.Text);
             tenant.TenantStatus = cmbStatus.SelectedItem.ToString();
             tenant.TenantID = int.Parse(txtTenantID.Text);
@@ -77,6 +78,11 @@ namespace ONT_Project_Semester2
             Form14 form = new Form14();
             form.Show();
             this.Hide();
+
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
