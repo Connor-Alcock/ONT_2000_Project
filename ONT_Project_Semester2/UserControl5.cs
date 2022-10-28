@@ -41,7 +41,28 @@ namespace ONT_Project_Semester2
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            //DvgReport5.DataSource = bll.GetReport5();
+
+            if (cmbAmount.SelectedItem.Equals("Between R1000 - R3000"))
+            {
+
+                DvgReport5.DataSource = bll.GetReport5();
+
+
+            }
+            else if(cmbAmount.SelectedItem.Equals("Between R3000 - R6000"))
+            {
+
+
+
+
+            }
+            else if (cmbAmount.SelectedItem.Equals("Between R6000 - R10000"))
+            {
+
+
+
+
+            }
         }
     }
 }

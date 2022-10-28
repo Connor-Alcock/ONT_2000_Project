@@ -206,6 +206,7 @@ namespace ONT_Project_Semester2
             this.txtTenantID.Name = "txtTenantID";
             this.txtTenantID.Size = new System.Drawing.Size(518, 27);
             this.txtTenantID.TabIndex = 1;
+            this.txtTenantID.TextChanged += new System.EventHandler(this.txtTenantID_TextChanged);
             // 
             // label7
             // 
@@ -295,6 +296,7 @@ namespace ONT_Project_Semester2
             this.dgvTenant.Size = new System.Drawing.Size(751, 167);
             this.dgvTenant.TabIndex = 0;
             this.dgvTenant.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenant_CellClick);
+            this.dgvTenant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenant_CellContentClick);
             // 
             // errorProvider1
             // 

@@ -75,8 +75,11 @@ namespace ONT_Project_Semester2
         {
 
             txtTenantID.Enabled = false;
-            cmbStatus.Items.Add("Available");
-            cmbStatus.Items.Add("Unavailable");
+            cmbStatus.Items.Add("Working");
+            cmbStatus.Items.Add("Unemployeed");
+            cmbStatus.Items.Add("Retired");
+            cmbStatus.Items.Add("Self Employeed");
+            cmbStatus.Items.Add("Student");
 
         }
 
@@ -88,7 +91,6 @@ namespace ONT_Project_Semester2
         private void dgvTenant_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvTenant.SelectedRows.Count > 0)
-            //if (e.MouseEventArgs.Button == System.Windows.Forms.MouseButtons.Right)
             {
 
                 txtTenantID.Text = dgvTenant.SelectedRows[0].Cells["TenantID"].Value.ToString();
@@ -224,6 +226,16 @@ namespace ONT_Project_Semester2
                 e.Cancel = false;
                 errorProvider6.SetError(cmbStatus, "");
             }
+        }
+
+        private void dgvTenant_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtTenantID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

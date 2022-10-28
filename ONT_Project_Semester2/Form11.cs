@@ -60,13 +60,6 @@ namespace ONT_Project_Semester2
         private void btnAdd_Click(object sender, EventArgs e)
         {
             
-            //if (cmbPropertyAgentID.SelectedValue == null)
-            //{
-
-            //    return;
-
-            //}
-            
             Rentals rentals = new Rentals();
 
             rentals.PropertyAgentID = Convert.ToInt32(cmbPropertyAgentID.SelectedValue.ToString());
@@ -176,7 +169,7 @@ namespace ONT_Project_Semester2
 
         private void StartDate_Validating(object sender, CancelEventArgs e)
         {
-            if (StartDate.Value > EndDate.Value)
+            if (StartDate.Value < EndDate.Value)
             {
                 e.Cancel = true;
 
@@ -193,11 +186,11 @@ namespace ONT_Project_Semester2
 
         private void EndDate_Validating(object sender, CancelEventArgs e)
         {
-            if (EndDate.Value> StartDate.Value)
+            if (EndDate.Value > StartDate.Value)
             {
                 e.Cancel = true;
 
-                errorProvider4.SetError(cmbTenatID, "Ending rental date can not be sooner that starting rental date");
+                errorProvider4.SetError(EndDate, "Ending rental date can not be sooner that starting rental date");
 
             }
             else

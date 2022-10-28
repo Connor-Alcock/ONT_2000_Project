@@ -30,8 +30,8 @@ namespace ONT_Project_Semester2
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnDisplay = new System.Windows.Forms.Button();
             this.dgvReport7 = new System.Windows.Forms.DataGridView();
+            this.btnDisplay = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport7)).BeginInit();
             this.SuspendLayout();
@@ -47,15 +47,7 @@ namespace ONT_Project_Semester2
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agencies with the post Properties";
-            // 
-            // btnDisplay
-            // 
-            this.btnDisplay.Location = new System.Drawing.Point(6, 40);
-            this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(133, 45);
-            this.btnDisplay.TabIndex = 0;
-            this.btnDisplay.Text = "Display";
-            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dgvReport7
             // 
@@ -66,6 +58,15 @@ namespace ONT_Project_Semester2
             this.dgvReport7.RowTemplate.Height = 24;
             this.dgvReport7.Size = new System.Drawing.Size(858, 413);
             this.dgvReport7.TabIndex = 1;
+            // 
+            // btnDisplay
+            // 
+            this.btnDisplay.Location = new System.Drawing.Point(6, 40);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(133, 45);
+            this.btnDisplay.TabIndex = 0;
+            this.btnDisplay.Text = "Display";
+            this.btnDisplay.UseVisualStyleBackColor = true;
             // 
             // UserControl7
             // 

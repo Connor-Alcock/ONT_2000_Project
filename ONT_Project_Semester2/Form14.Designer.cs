@@ -36,12 +36,14 @@ namespace ONT_Project_Semester2
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnRental);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnLogout);
@@ -57,9 +59,9 @@ namespace ONT_Project_Semester2
             // 
             // btnRental
             // 
-            this.btnRental.Location = new System.Drawing.Point(7, 329);
+            this.btnRental.Location = new System.Drawing.Point(8, 329);
             this.btnRental.Name = "btnRental";
-            this.btnRental.Size = new System.Drawing.Size(276, 62);
+            this.btnRental.Size = new System.Drawing.Size(275, 62);
             this.btnRental.TabIndex = 3;
             this.btnRental.Text = "Rentals";
             this.btnRental.UseVisualStyleBackColor = true;
@@ -77,9 +79,9 @@ namespace ONT_Project_Semester2
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(102, 397);
+            this.btnLogout.Location = new System.Drawing.Point(85, 397);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(88, 31);
+            this.btnLogout.Size = new System.Drawing.Size(77, 31);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -89,7 +91,7 @@ namespace ONT_Project_Semester2
             // 
             this.btnExit.Location = new System.Drawing.Point(8, 397);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(88, 31);
+            this.btnExit.Size = new System.Drawing.Size(71, 31);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -103,6 +105,16 @@ namespace ONT_Project_Semester2
             this.label1.Size = new System.Drawing.Size(134, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tenant Menu ";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(168, 397);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(115, 31);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Credentials";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // Form14
             // 
@@ -128,5 +140,6 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRental;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

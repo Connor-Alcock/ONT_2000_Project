@@ -39,6 +39,18 @@ namespace BLL
 
         }
 
+        public DataTable getLoggedTenant(int TenantID)
+        {
+
+            return dal.GetLoggedTenant(TenantID);
+
+        }
+        public int UpdateLoggedTenant(Tenant tenant)
+        {
+
+            return dal.UpdateLoggedTenant(tenant);
+        }
+
 
 
         // DAL for Form 2 "PropertyType"
@@ -319,7 +331,18 @@ namespace BLL
             return dal.GetReport4();
 
         }
+        public DataTable GetReport5()
+        {
 
+            return dal.GetReport5();
 
+        }
+
+        public DataTable GetReport6()
+        {
+
+            return dal.GetReport6();
+
+        }
     }
 }

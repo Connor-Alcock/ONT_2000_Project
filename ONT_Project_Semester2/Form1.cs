@@ -24,6 +24,7 @@ namespace ONT_Project_Semester2
         }
 
         BusinessLogicLayer bll = new BusinessLogicLayer();
+        public static int LoginID ;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -32,77 +33,6 @@ namespace ONT_Project_Semester2
             cmbUserType.Items.Add("Agent");
             cmbUserType.Items.Add("Tenant");
 
-        }
-
-        private void ProptertyType_Click(object sender, EventArgs e)
-        {
-            Form2 form = new Form2();
-            form.Show();
-            this.Hide();
-        }
-
-        private void Properties_Click(object sender, EventArgs e)
-        {
-            Form3 form = new Form3();
-            form.Show();
-            this.Hide();
-        }
-
-        private void Cities_Click(object sender, EventArgs e)
-        {
-            Form5 form = new Form5();
-            form.Show();
-            this.Hide();
-        }
-
-        private void Suburbes_Click(object sender, EventArgs e)
-        {
-            Form6 form = new Form6();
-            form.Show();
-            this.Hide();
-
-        }
-
-        private void Provinces_Click(object sender, EventArgs e)
-        {
-            Form4 form = new Form4();
-            form.Show();
-            this.Hide();
-        }
-
-        private void Agencies_Click(object sender, EventArgs e)
-        {
-            Form7 form = new Form7();
-            form.Show();
-            this.Hide();
-        }
-
-        private void Agents_Click(object sender, EventArgs e)
-        {
-            Form8 form = new Form8();
-            form.Show();
-            this.Hide();
-        }
-
-        private void Tenants_Click(object sender, EventArgs e)
-        {
-            Form9 form = new Form9();
-            form.Show();
-            this.Hide();
-        }
-
-        private void PropertyAgents_Click(object sender, EventArgs e)
-        {
-            Form10 form = new Form10();
-            form.Show();
-            this.Hide();
-        }
-
-        private void Rentals_Click(object sender, EventArgs e)
-        {
-            Form11 form = new Form11();
-            form.Show();
-            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -202,6 +132,9 @@ namespace ONT_Project_Semester2
             {
                 DataTable dt = bll.getTenantLogin(txtUserName.Text, txtUserPassoword.Text);
 
+                LoginID = Convert.ToInt32(dt.Rows[0]["TenantID"].ToString());
+
+
                 string userName, userPassword;
 
                 try
@@ -277,6 +210,13 @@ namespace ONT_Project_Semester2
         private void cmbUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Form17 form = new Form17();
+            form.Show();
+            this.Hide();
         }
     }
 }

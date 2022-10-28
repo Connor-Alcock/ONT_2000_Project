@@ -35,5 +35,12 @@ namespace ONT_Project_Semester2
             form.Show();
             this.Hide();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Form18 form = new Form18();
+            form.Show();
+            this.Hide();
+        }
     }
 }

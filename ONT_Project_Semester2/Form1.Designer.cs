@@ -43,12 +43,14 @@ namespace ONT_Project_Semester2
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRegister);
             this.groupBox1.Controls.Add(this.btnReports);
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.btnClear);
@@ -82,9 +84,9 @@ namespace ONT_Project_Semester2
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(193, 466);
+            this.btnExit.Location = new System.Drawing.Point(127, 466);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(115, 34);
+            this.btnExit.Size = new System.Drawing.Size(106, 34);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit ";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -92,9 +94,9 @@ namespace ONT_Project_Semester2
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(314, 466);
+            this.btnClear.Location = new System.Drawing.Point(239, 466);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(115, 34);
+            this.btnClear.Size = new System.Drawing.Size(106, 34);
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -102,9 +104,9 @@ namespace ONT_Project_Semester2
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(435, 466);
+            this.btnLogin.Location = new System.Drawing.Point(462, 466);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(115, 34);
+            this.btnLogin.Size = new System.Drawing.Size(106, 34);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -181,6 +183,16 @@ namespace ONT_Project_Semester2
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(351, 466);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(105, 34);
+            this.btnRegister.TabIndex = 10;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,6 +224,7 @@ namespace ONT_Project_Semester2
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnRegister;
     }
 }
 

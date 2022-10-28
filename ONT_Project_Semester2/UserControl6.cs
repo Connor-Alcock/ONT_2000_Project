@@ -22,7 +22,7 @@ namespace ONT_Project_Semester2
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            //DgvReport6 
+            dgvReport6.DataSource = bll.GetReport6();
         }
     }
 }

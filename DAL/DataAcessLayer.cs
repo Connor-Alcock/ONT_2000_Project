@@ -61,6 +61,37 @@ namespace DAL
 
         }
 
+        public DataTable GetLoggedTenant(int TenantID)
+        {
+            dbComm = new SqlCommand("sp_GetLoggedTenant", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@TenantID", TenantID);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+        }
+
+        public int UpdateLoggedTenant(Tenant tenant)
+        {
+            dbConn.Open();
+
+            dbComm = new SqlCommand("sp_UpdateLoggedTenant", dbConn);
+
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@Email", tenant.TenantEmail);
+            dbComm.Parameters.AddWithValue("@Password", tenant.TenantPassword);
+            dbComm.Parameters.AddWithValue("@Phone", tenant.TenantPhone);
+            dbComm.Parameters.AddWithValue("@Status", tenant.TenantStatus);
+
+            int x = dbComm.ExecuteNonQuery();
+
+            dbConn.Close();
+            return x;
+        }
+
 
 
 
@@ -643,6 +674,40 @@ namespace DAL
             dbConn.Open();
 
             dbComm = new SqlCommand("sp_GetReport4", dbConn);
+
+            dt = new DataTable();
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+
+            dbAdapter.Fill(dt);
+
+            dbConn.Close();
+            return dt;
+        }
+
+        public DataTable GetReport5()
+        {
+            dbConn.Open();
+
+            dbComm = new SqlCommand("sp_GetReport5", dbConn);
+
+            dt = new DataTable();
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+
+            dbAdapter.Fill(dt);
+
+            dbConn.Close();
+            return dt;
+        }
+
+
+
+        public DataTable GetReport6()
+        {
+            dbConn.Open();
+
+            dbComm = new SqlCommand("sp_GetReport6", dbConn);
 
             dt = new DataTable();
 
