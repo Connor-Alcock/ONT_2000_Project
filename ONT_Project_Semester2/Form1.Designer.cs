@@ -31,6 +31,7 @@ namespace ONT_Project_Semester2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReports = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace ONT_Project_Semester2
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnReports = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,16 @@ namespace ONT_Project_Semester2
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Location = new System.Drawing.Point(6, 475);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(115, 39);
+            this.btnReports.TabIndex = 9;
+            this.btnReports.Text = "Reports";
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnExit
             // 
@@ -107,6 +117,7 @@ namespace ONT_Project_Semester2
             this.cmbUserType.Name = "cmbUserType";
             this.cmbUserType.Size = new System.Drawing.Size(384, 33);
             this.cmbUserType.TabIndex = 5;
+            this.cmbUserType.SelectedIndexChanged += new System.EventHandler(this.cmbUserType_SelectedIndexChanged);
             // 
             // txtUserPassoword
             // 
@@ -169,16 +180,6 @@ namespace ONT_Project_Semester2
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.Location = new System.Drawing.Point(6, 475);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(115, 39);
-            this.btnReports.TabIndex = 9;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // HomePage
             // 

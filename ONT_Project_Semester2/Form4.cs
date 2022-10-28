@@ -30,8 +30,8 @@ namespace ONT_Project_Semester2
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            HomePage form = new HomePage();
-            form.Show();
+            Form13 form13 = new Form13();
+            form13.Show();
             this.Hide();
 
         }

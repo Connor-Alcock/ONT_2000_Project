@@ -109,13 +109,23 @@ namespace ONT_Project_Semester2
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            if (UserAccess.Instance.UserType.Equals("Agent"))
+            {
 
-           
+                Form12 form12 = new Form12();
+                form12.Show();
+                this.Hide();
 
-            HomePage form = new HomePage();
-            form.Show();
-            this.Hide();
-            
+
+            }
+            else
+            {
+
+                Form13 form13 = new Form13();
+                form13.Show();
+                this.Hide();
+
+            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)

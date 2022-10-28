@@ -273,5 +273,10 @@ namespace ONT_Project_Semester2
             form.Show();
             this.Hide(); 
         }
+
+        private void cmbUserType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

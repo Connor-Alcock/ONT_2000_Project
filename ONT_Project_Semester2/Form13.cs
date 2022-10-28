@@ -72,5 +72,26 @@ namespace ONT_Project_Semester2
             form.Show();
             this.Hide();
         }
+
+        private void btnpropertyAgent_Click(object sender, EventArgs e)
+        {
+            Form10 form = new Form10();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnTenant_Click(object sender, EventArgs e)
+        {
+            Form9 form = new Form9();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            HomePage form = new HomePage();
+            form.Show();
+            this.Hide();
+        }
     }
 }

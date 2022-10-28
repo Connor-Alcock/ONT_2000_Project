@@ -28,5 +28,12 @@ namespace ONT_Project_Semester2
             form.Show();
             this.Hide();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            HomePage form = new HomePage();
+            form.Show();
+            this.Hide();
+        }
     }
 }

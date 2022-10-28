@@ -30,6 +30,9 @@ namespace ONT_Project_Semester2
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.userControl41 = new ONT_Project_Semester2.UserControl4();
+            this.userControl31 = new ONT_Project_Semester2.UserControl3();
+            this.userControl21 = new ONT_Project_Semester2.UserControl2();
             this.btnReport7 = new System.Windows.Forms.Button();
             this.btnReport6 = new System.Windows.Forms.Button();
             this.btnReport5 = new System.Windows.Forms.Button();
@@ -37,15 +40,18 @@ namespace ONT_Project_Semester2
             this.btnReport3 = new System.Windows.Forms.Button();
             this.btnReport2 = new System.Windows.Forms.Button();
             this.btnReport1 = new System.Windows.Forms.Button();
-            this.userControl41 = new ONT_Project_Semester2.UserControl4();
-            this.userControl31 = new ONT_Project_Semester2.UserControl3();
-            this.userControl21 = new ONT_Project_Semester2.UserControl2();
             this.Report1 = new ONT_Project_Semester2.Report1();
+            this.userControl51 = new ONT_Project_Semester2.UserControl5();
+            this.userControl61 = new ONT_Project_Semester2.UserControl6();
+            this.userControl71 = new ONT_Project_Semester2.UserControl7();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.userControl71);
+            this.groupBox1.Controls.Add(this.userControl61);
+            this.groupBox1.Controls.Add(this.userControl51);
             this.groupBox1.Controls.Add(this.userControl41);
             this.groupBox1.Controls.Add(this.userControl31);
             this.groupBox1.Controls.Add(this.userControl21);
@@ -64,6 +70,31 @@ namespace ONT_Project_Semester2
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reports";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // userControl41
+            // 
+            this.userControl41.Location = new System.Drawing.Point(204, 35);
+            this.userControl41.Margin = new System.Windows.Forms.Padding(4);
+            this.userControl41.Name = "userControl41";
+            this.userControl41.Size = new System.Drawing.Size(950, 517);
+            this.userControl41.TabIndex = 4;
+            // 
+            // userControl31
+            // 
+            this.userControl31.Location = new System.Drawing.Point(204, 35);
+            this.userControl31.Margin = new System.Windows.Forms.Padding(4);
+            this.userControl31.Name = "userControl31";
+            this.userControl31.Size = new System.Drawing.Size(950, 525);
+            this.userControl31.TabIndex = 3;
+            // 
+            // userControl21
+            // 
+            this.userControl21.Location = new System.Drawing.Point(204, 35);
+            this.userControl21.Margin = new System.Windows.Forms.Padding(4);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(950, 525);
+            this.userControl21.TabIndex = 2;
             // 
             // btnReport7
             // 
@@ -73,6 +104,7 @@ namespace ONT_Project_Semester2
             this.btnReport7.TabIndex = 0;
             this.btnReport7.Text = "Agencys with most properties";
             this.btnReport7.UseVisualStyleBackColor = true;
+            this.btnReport7.Click += new System.EventHandler(this.btnReport7_Click);
             // 
             // btnReport6
             // 
@@ -82,6 +114,7 @@ namespace ONT_Project_Semester2
             this.btnReport6.TabIndex = 0;
             this.btnReport6.Text = "Rented over time";
             this.btnReport6.UseVisualStyleBackColor = true;
+            this.btnReport6.Click += new System.EventHandler(this.btnReport6_Click);
             // 
             // btnReport5
             // 
@@ -91,6 +124,7 @@ namespace ONT_Project_Semester2
             this.btnReport5.TabIndex = 0;
             this.btnReport5.Text = "Rentals based of specific ammounts ";
             this.btnReport5.UseVisualStyleBackColor = true;
+            this.btnReport5.Click += new System.EventHandler(this.btnReport5_Click);
             // 
             // btnReport4
             // 
@@ -100,6 +134,7 @@ namespace ONT_Project_Semester2
             this.btnReport4.TabIndex = 0;
             this.btnReport4.Text = "Ended Rentals";
             this.btnReport4.UseVisualStyleBackColor = true;
+            this.btnReport4.Click += new System.EventHandler(this.btnReport4_Click);
             // 
             // btnReport3
             // 
@@ -109,6 +144,7 @@ namespace ONT_Project_Semester2
             this.btnReport3.TabIndex = 0;
             this.btnReport3.Text = "Rentals for Tenants and Agents";
             this.btnReport3.UseVisualStyleBackColor = true;
+            this.btnReport3.Click += new System.EventHandler(this.btnReport3_Click);
             // 
             // btnReport2
             // 
@@ -118,6 +154,7 @@ namespace ONT_Project_Semester2
             this.btnReport2.TabIndex = 0;
             this.btnReport2.Text = "Cities, Provinces and Suburbs";
             this.btnReport2.UseVisualStyleBackColor = true;
+            this.btnReport2.Click += new System.EventHandler(this.btnReport2_Click);
             // 
             // btnReport1
             // 
@@ -129,30 +166,6 @@ namespace ONT_Project_Semester2
             this.btnReport1.UseVisualStyleBackColor = true;
             this.btnReport1.Click += new System.EventHandler(this.btnReport1_Click);
             // 
-            // userControl41
-            // 
-            this.userControl41.Location = new System.Drawing.Point(357, 150);
-            this.userControl41.Margin = new System.Windows.Forms.Padding(4);
-            this.userControl41.Name = "userControl41";
-            this.userControl41.Size = new System.Drawing.Size(950, 525);
-            this.userControl41.TabIndex = 4;
-            // 
-            // userControl31
-            // 
-            this.userControl31.Location = new System.Drawing.Point(304, 102);
-            this.userControl31.Margin = new System.Windows.Forms.Padding(4);
-            this.userControl31.Name = "userControl31";
-            this.userControl31.Size = new System.Drawing.Size(950, 525);
-            this.userControl31.TabIndex = 3;
-            // 
-            // userControl21
-            // 
-            this.userControl21.Location = new System.Drawing.Point(250, 54);
-            this.userControl21.Margin = new System.Windows.Forms.Padding(4);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(950, 525);
-            this.userControl21.TabIndex = 2;
-            // 
             // Report1
             // 
             this.Report1.Location = new System.Drawing.Point(204, 35);
@@ -160,6 +173,31 @@ namespace ONT_Project_Semester2
             this.Report1.Name = "Report1";
             this.Report1.Size = new System.Drawing.Size(950, 525);
             this.Report1.TabIndex = 1;
+            // 
+            // userControl51
+            // 
+            this.userControl51.Location = new System.Drawing.Point(204, 35);
+            this.userControl51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userControl51.Name = "userControl51";
+            this.userControl51.Size = new System.Drawing.Size(950, 517);
+            this.userControl51.TabIndex = 5;
+            this.userControl51.Load += new System.EventHandler(this.userControl51_Load);
+            // 
+            // userControl61
+            // 
+            this.userControl61.Location = new System.Drawing.Point(204, 36);
+            this.userControl61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userControl61.Name = "userControl61";
+            this.userControl61.Size = new System.Drawing.Size(950, 516);
+            this.userControl61.TabIndex = 6;
+            // 
+            // userControl71
+            // 
+            this.userControl71.Location = new System.Drawing.Point(204, 35);
+            this.userControl71.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userControl71.Name = "userControl71";
+            this.userControl71.Size = new System.Drawing.Size(950, 516);
+            this.userControl71.TabIndex = 7;
             // 
             // Form16
             // 
@@ -189,5 +227,8 @@ namespace ONT_Project_Semester2
         private UserControl2 userControl21;
         private UserControl3 userControl31;
         private UserControl4 userControl41;
+        private UserControl7 userControl71;
+        private UserControl6 userControl61;
+        private UserControl5 userControl51;
     }
 }
