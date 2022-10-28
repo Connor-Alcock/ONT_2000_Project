@@ -31,19 +31,19 @@ namespace ONT_Project_Semester2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form13));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTenant = new System.Windows.Forms.Button();
+            this.btnpropertyAgent = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAgencies = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAgents = new System.Windows.Forms.Button();
             this.btnProvince = new System.Windows.Forms.Button();
             this.btnPropertyType = new System.Windows.Forms.Button();
             this.btnCities = new System.Windows.Forms.Button();
             this.btnProperties = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnpropertyAgent = new System.Windows.Forms.Button();
-            this.btnTenant = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,26 @@ namespace ONT_Project_Semester2
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Admin Menu";
+            // 
+            // btnTenant
+            // 
+            this.btnTenant.Location = new System.Drawing.Point(261, 436);
+            this.btnTenant.Name = "btnTenant";
+            this.btnTenant.Size = new System.Drawing.Size(122, 49);
+            this.btnTenant.TabIndex = 4;
+            this.btnTenant.Text = "Tenant";
+            this.btnTenant.UseVisualStyleBackColor = true;
+            this.btnTenant.Click += new System.EventHandler(this.btnTenant_Click);
+            // 
+            // btnpropertyAgent
+            // 
+            this.btnpropertyAgent.Location = new System.Drawing.Point(133, 436);
+            this.btnpropertyAgent.Name = "btnpropertyAgent";
+            this.btnpropertyAgent.Size = new System.Drawing.Size(122, 49);
+            this.btnpropertyAgent.TabIndex = 3;
+            this.btnpropertyAgent.Text = "Property Agent";
+            this.btnpropertyAgent.UseVisualStyleBackColor = true;
+            this.btnpropertyAgent.Click += new System.EventHandler(this.btnpropertyAgent_Click);
             // 
             // pictureBox1
             // 
@@ -99,6 +119,7 @@ namespace ONT_Project_Semester2
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAgencies
             // 
@@ -109,6 +130,16 @@ namespace ONT_Project_Semester2
             this.btnAgencies.Text = "Agencies";
             this.btnAgencies.UseVisualStyleBackColor = true;
             this.btnAgencies.Click += new System.EventHandler(this.btnAgencies_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(133, 381);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 49);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Suburbs";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnSuburbs_Click);
             // 
             // btnAgents
             // 
@@ -169,36 +200,6 @@ namespace ONT_Project_Semester2
             this.label1.Size = new System.Drawing.Size(123, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin Menu";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(133, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 49);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Suburbs";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnSuburbs_Click);
-            // 
-            // btnpropertyAgent
-            // 
-            this.btnpropertyAgent.Location = new System.Drawing.Point(133, 436);
-            this.btnpropertyAgent.Name = "btnpropertyAgent";
-            this.btnpropertyAgent.Size = new System.Drawing.Size(122, 49);
-            this.btnpropertyAgent.TabIndex = 3;
-            this.btnpropertyAgent.Text = "Property Agent";
-            this.btnpropertyAgent.UseVisualStyleBackColor = true;
-            this.btnpropertyAgent.Click += new System.EventHandler(this.btnpropertyAgent_Click);
-            // 
-            // btnTenant
-            // 
-            this.btnTenant.Location = new System.Drawing.Point(261, 436);
-            this.btnTenant.Name = "btnTenant";
-            this.btnTenant.Size = new System.Drawing.Size(122, 49);
-            this.btnTenant.TabIndex = 4;
-            this.btnTenant.Text = "Tenant";
-            this.btnTenant.UseVisualStyleBackColor = true;
-            this.btnTenant.Click += new System.EventHandler(this.btnTenant_Click);
             // 
             // Form13
             // 
